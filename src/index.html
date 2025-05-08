@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/main.css">
 </head>
-<body>
-    <div class="container">
-        <h2>Memory Game</h2>
+<body class="flex justify-center items-center min-h-screen bg-[#EDE8DC]">
+    <div class="flex flex-col justify-center items-center gap-8 bg-gradient-to-br from-[#B17F59] via-[#A5B68D] to-[#C1CFA1] p-10 rounded-3xl shadow-2xl">
+        <h2 class="text-4xl text-white uppercase tracking-wider font-bold">Memory Game</h2>
         <div class="game"></div>
         <button class="reset"
         onclick="window.location.reload()">RESET GAME</button>
