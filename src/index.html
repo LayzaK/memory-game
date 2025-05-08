@@ -15,7 +15,18 @@
         <button class="reset"
         onclick="window.location.reload()">RESET GAME</button>
     </div>
-    
+    <div id="winModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+        <div class="bg-[#f5f5dc] text-[#3b3b3b] rounded-2xl shadow-lg p-6 text-center space-y-4 w-72">
+            <h3 class="text-2xl font-bold text-[#b17f59]">Você venceu! 🎉</h3>
+            <p class="text-sm">Parabéns por concluir o jogo da memória!</p>
+            <button
+                onclick="restartGame()"
+                class="bg-[#ede8dc] text-[#b17f59] font-semibold px-4 py-2 rounded-lg border border-[#b17f59] hover:bg-[#b17f59] hover:text-white transition">
+                Jogar novamente
+            </button>
+        </div>
+    </div>
     <script src="./scripts/engine.js" defer></script> 
+
 </body>
 </html>
