@@ -19,6 +19,7 @@ const emojis = [
 let openCards = [];
 
 
+
 let shuffleEmojis = emojis.sort(() =>(Math.random() > 0.5 ? 2 : -1));
 
 for(let i=0; i < emojis.length; i++){
@@ -59,7 +60,15 @@ function checkMatch(){
     openCards = [];
 
     // arrumar
-    if(document.querySelectorAll("boxMatch").length == emojis.length){
-        alert("Você venceu !");
-    }
+    const totalCards = emojis.length;
+    if(document.querySelectorAll(".boxMatch").length === totalCards){
+        setTimeout(showModal, 300);
+}}
+
+function showModal(){
+    document.getElementById('winModal').classList.remove("hidden")
+}
+
+function restartGame(){
+    window.location.reload(); // recarrega a página
 }

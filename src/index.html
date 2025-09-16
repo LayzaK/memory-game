@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/main.css">
 </head>
-<body>
-    <div class="container">
-        <h2>Memory Game</h2>
+<body class="flex justify-center items-center min-h-screen bg-[#EDE8DC]">
+    <div class="flex flex-col justify-center items-center gap-8 bg-gradient-to-br from-[#B17F59] via-[#A5B68D] to-[#C1CFA1] p-10 rounded-3xl shadow-2xl">
+        <h2 class="text-4xl text-white uppercase tracking-wider font-bold">Memory Game</h2>
         <div class="game"></div>
         <button class="reset"
         onclick="window.location.reload()">RESET GAME</button>
     </div>
-    
+    <div id="winModal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden">
+        <div class="bg-[#f5f5dc] text-[#3b3b3b] rounded-2xl shadow-lg p-6 text-center space-y-4 w-72">
+            <h3 class="text-2xl font-bold text-[#b17f59]">Você venceu! 🎉</h3>
+            <p class="text-sm">Parabéns por concluir o jogo da memória!</p>
+            <button
+                onclick="restartGame()"
+                class="bg-[#ede8dc] text-[#b17f59] font-semibold px-4 py-2 rounded-lg border border-[#b17f59] hover:bg-[#b17f59] hover:text-white transition">
+                Jogar novamente
+            </button>
+        </div>
+    </div>
     <script src="./scripts/engine.js" defer></script> 
+
 </body>
 </html>
